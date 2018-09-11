@@ -342,7 +342,8 @@ final class Drawer implements DrawerInterface
             $y2 = round($info['characterWidth'] * $sin + $info['characterHeight'] * $cos);
 
             $xdiff = 0 - min($x1, $x2);
-            $ydiff = 0 - min($y1, $y2);
+            //$ydiff = 0 - min($y1, $y2);            
+            $ydiff = 0 - $y2*.1;
 
             if ($width !== null) {
                 $string = $this->wrapText($string, $text, $angle, $width);
